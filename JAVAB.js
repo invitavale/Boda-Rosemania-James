@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // álbum de fotos compartido, formulario de RSVP, etc.).
 function openLocation(location) {
     const urls = {
-        ceremony: 'https://maps.google.com/maps/search/Variedades%20Clenia/@19.41077017,-70.67304713,17z?hl=es'
+        ceremony: 'https://maps.google.com/maps/search/Iglesia%20Adventista%20Luz%20Celestial/@19.38141467,-70.64260228,17z?hl=es'
     };
     const url = urls[location];
     if (url) {
