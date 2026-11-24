@@ -215,3 +215,10 @@ html body .content > section.rsvp-section::before {
     background-image: url("iconos/anim/anillos-oro.webp?v=1") !important;
     filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25)) !important;
 }
+
+/* Itinerario: íconos morado y dorado dentro del medallón blanco */
+.itinerario-section .t-ico.t-ico-rj { background: #FFFFFF !important; }
+.itinerario-section .t-ico.t-ico-rj img {
+    width: 74% !important; height: 74% !important; object-fit: contain !important;
+    mix-blend-mode: normal !important; filter: none !important; animation: none !important;
+}
