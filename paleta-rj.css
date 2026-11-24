@@ -1,0 +1,217 @@
+/* =====================================================================
+   Rosemania & James · 31 de enero de 2027
+   Paleta del pastel: verde menta, morado lila y blanco.
+   Se carga al final: solo ajusta colores, flores y textos nuevos.
+   ===================================================================== */
+:root {
+    --rj-menta: #A8D5BA;
+    --rj-menta-osc: #557F6C;
+    --rj-menta-prof: #3D5A4E;
+    --rj-lila: #C3A8E0;
+    --rj-lila-osc: #7E62A8;
+    --rj-lila-prof: #5E4785;
+    --rj-blanco: #FFFFFF;
+}
+
+/* ---------- Secciones claras: blanco con un velo lila muy suave ---------- */
+html, body { background-color: #FBFAFD; }
+.content > section:nth-of-type(odd) {
+    background-color: #FBFAFD !important;
+    background-image:
+        radial-gradient(120% 70% at 50% 0%, rgba(232, 222, 248, 0.55) 0%, rgba(232, 222, 248, 0) 60%),
+        radial-gradient(90% 60% at 50% 110%, rgba(168, 213, 186, 0.22) 0%, rgba(168, 213, 186, 0) 70%) !important;
+}
+
+/* ---------- Secciones de color: verde menta profundo ---------- */
+.content > section:nth-of-type(even),
+.content > .countdown-section.tono-oscuro {
+    background-color: #5E8A76 !important;
+    background-image:
+        radial-gradient(130% 80% at 50% 0%, rgba(168, 213, 186, 0.35) 0%, rgba(168, 213, 186, 0) 60%),
+        radial-gradient(140% 90% at 50% 120%, rgba(40, 70, 58, 0.45) 0%, rgba(40, 70, 58, 0) 70%) !important;
+}
+
+/* ---------- Itinerario en morado lila (mismo tono de las rosas) ---------- */
+.content > section.itinerario-section {
+    background-color: #8A70B3 !important;
+    background-image:
+        radial-gradient(130% 80% at 50% 0%, rgba(214, 196, 240, 0.40) 0%, rgba(214, 196, 240, 0) 60%),
+        radial-gradient(140% 90% at 50% 120%, rgba(70, 48, 105, 0.45) 0%, rgba(70, 48, 105, 0) 70%) !important;
+}
+.content > section.itinerario-section .section-title { color: #FFFFFF !important; }
+.content > section.itinerario-section .section-subtitle,
+.itinerario-section .t-tx b,
+.itinerario-section .t-tx span { color: #FFFFFF !important; }
+.itinerario-section .t-tx small { color: #EDE4F8 !important; }
+.itinerario-section .t-dot { background: #E9DDF7 !important; box-shadow: 0 0 0 4px rgba(255,255,255,0.18) !important; }
+
+/* ---------- Regalos ---------- */
+.gifts-section .section-subtitle strong { color: #FFFFFF; font-weight: 600; }
+
+/* Botones dentro de secciones de color: blanco con letras menta */
+.content > section:nth-of-type(even) .btn-wedding,
+.content > section.itinerario-section .btn-wedding {
+    background: #FFFFFF !important;
+    color: var(--rj-menta-osc) !important;
+}
+
+/* Portada: velo menta en lugar de café */
+.hero-names::before {
+    background: linear-gradient(180deg, rgba(40, 70, 58, 0) 0%, rgba(40, 70, 58, 0.45) 45%, rgba(40, 70, 58, 0.45) 100%) !important;
+}
+
+/* Pie de página */
+.footer-content h3 { color: #FFFFFF !important; }
+
+/* Onda que entra al Itinerario en lila */
+.section-divider.a-lila::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 60' preserveAspectRatio='none'%3E%3Cpath fill='%238A70B3' d='M0 31C60 13 120 5 175 5C255 5 335 20 400 33V60H0Z'/%3E%3Cg fill='none' stroke='%238A70B3' stroke-linecap='round'%3E%3Cpath stroke-width='2' opacity='.75' d='M38 30C80 20 120 14 170 13' vector-effect='non-scaling-stroke'/%3E%3Cpath stroke-width='1.4' opacity='.6' d='M160 9C190 8 220 9 250 12' vector-effect='non-scaling-stroke'/%3E%3Cpath stroke-width='1.6' opacity='.7' d='M340 30C360 33 380 35 398 36' vector-effect='non-scaling-stroke'/%3E%3Cpath stroke-width='1.5' opacity='.85' d='M0 24C20 19 34 15 48 12' vector-effect='non-scaling-stroke'/%3E%3Cpath stroke-width='1.1' opacity='.55' d='M200 1C224 1 250 3 272 6' vector-effect='non-scaling-stroke'/%3E%3Cpath stroke-width='1.3' opacity='.7' d='M372 26C382 27 392 28 400 29' vector-effect='non-scaling-stroke'/%3E%3C/g%3E%3C/svg%3E"); }
+
+/* ---------- Ceremonia: una sola tarjeta centrada ---------- */
+.lugares-grid.lugares-uno {
+    grid-template-columns: minmax(0, 460px) !important;
+    justify-content: center !important;
+}
+
+/* ---------- Intro: sobre blanco con sello lila (se abre al tocar) ---------- */
+.intro-overlay { background-color: #F7F4FB !important; }
+.intro-video { transition: transform 1.4s cubic-bezier(.2,.7,.2,1), filter 1.4s ease; }
+.intro-overlay.is-opening .intro-video { transform: scale(1.28); filter: brightness(1.12) blur(1px); }
+.intro-flash { background: radial-gradient(circle at 50% 45%, #FFFFFF 0%, #F1EAFA 55%, #DCCBF0 100%) !important; }
+.intro-hint { color: #5E4785 !important; text-shadow: 0 1px 2px rgba(255,255,255,0.9), 0 0 14px rgba(255,255,255,0.8) !important; }
+.intro-tap { border-color: rgba(126, 98, 168, 0.85) !important; background: rgba(255,255,255,0.4) !important; }
+.intro-tap::after { background: #8A70B3 !important; box-shadow: 0 0 12px rgba(138, 112, 179, 0.7) !important; }
+.intro-skip { background: rgba(85, 127, 108, 0.8) !important; border-color: rgba(195, 168, 224, 0.7) !important; }
+
+/* ---------- Código de vestimenta (tarjeta en HTML) ---------- */
+.rg-sheet.dc-card {
+    position: relative; overflow: hidden;
+    max-width: 440px; width: calc(100% - 2rem);
+    padding: 3rem 1.8rem 2.2rem; text-align: center;
+    background: #FFFFFF; border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(40, 60, 50, 0.35);
+}
+.dc-flor { position: absolute; pointer-events: none; opacity: 0.9; }
+.dc-flor-tl { top: -30px; left: -40px; width: 130px; }
+.dc-flor-br { bottom: -18px; right: -18px; width: 100px; }
+.dc-kicker {
+    margin: 0 0 0.3rem; font-family: 'Bodoni Moda', serif; text-transform: uppercase;
+    letter-spacing: 0.32em; font-size: 0.78rem; color: var(--rj-menta-osc);
+}
+.dc-title {
+    margin: 0 0 1rem; font-family: 'Great Vibes', cursive; font-weight: 400;
+    font-size: 2.6rem; line-height: 1.1; color: var(--rj-lila-osc);
+}
+.dc-text {
+    position: relative; margin: 0 auto 1.5rem; max-width: 30ch;
+    font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.5; color: #4B5A54;
+}
+.dc-text b { color: var(--rj-lila-prof); font-weight: 600; }
+.dc-swatches { display: flex; justify-content: center; gap: 1.4rem; margin-bottom: 1rem; }
+.dc-sw { display: flex; flex-direction: column; align-items: center; gap: 0.45rem; }
+.dc-sw i {
+    position: relative; display: block; width: 54px; height: 54px; border-radius: 50%;
+    border: 2px solid rgba(85, 127, 108, 0.35); box-shadow: 0 6px 14px rgba(60, 60, 80, 0.15);
+}
+.dc-sw i::after { /* línea diagonal: color reservado */
+    content: ""; position: absolute; left: 50%; top: -4px; bottom: -4px; width: 2px;
+    background: #B4495E; transform: translateX(-50%) rotate(45deg); border-radius: 2px;
+}
+.dc-sw small { font-family: 'Bodoni Moda', serif; font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: #5F6B66; }
+.dc-note { margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; color: var(--rj-menta-osc); }
+
+/* ---------- Modal de regalos: tienda sin flecha (es informativo) ---------- */
+.rg-option-text b { font-weight: 600; }
+.itinerario-section .t-linea::before { border-color: rgba(255, 255, 255, 0.75) !important; }
+.rg-dress.dc-card { max-width: 440px; padding: 3rem 1.8rem 2.2rem; }
+.rg-dress.dc-card img.dc-flor { display: block; height: auto; position: absolute; }
+.rg-dress.dc-card img.dc-flor-tl { width: 120px; top: -26px; left: -34px; }
+.rg-dress.dc-card img.dc-flor-br { width: 92px; bottom: -14px; right: -14px; left: auto; top: auto; }
+.rg-dress.dc-card .rg-close { position: absolute; float: none; top: 10px; right: 10px; margin: 0; }
+
+/* Portada: foto de los novios (caras visibles bajo la guirnalda) */
+.hero-bg { object-position: 50% 30% !important; }
+@media (min-width: 1025px) {
+    .hero-section { background-image: url('foto0.jpg?v=rj2') !important; background-position: center 12% !important; }
+}
+
+/* Botón "¿Cómo llegar?" como enlace */
+a.btn-wedding.btn-link { display: inline-block; text-decoration: none; }
+
+/* Lista de regalos: tienda + ubicación */
+.rg-mesa-card { text-align: center; }
+.rg-mesa-store { margin: 0.2rem 0 0.8rem; font-family: 'Bodoni Moda', serif; font-size: 1.1rem; font-weight: 600; color: #7E62A8; }
+.rg-mesa-text { margin: 0 auto 1.2rem; max-width: 30ch; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; line-height: 1.5; color: #4B5A54; }
+.rg-mesa-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.75rem 1.4rem; border-radius: 999px; text-decoration: none;
+    background: #557F6C; color: #FFFFFF; font-size: 0.95rem; letter-spacing: 0.04em;
+    box-shadow: 0 10px 22px -10px rgba(61, 90, 78, 0.6);
+}
+.rg-mesa-btn:hover { background: #3D5A4E; }
+
+/* =====================================================================
+   Flores en las secciones blancas: piezas completas (sin recortes),
+   entrando solo por los bordes laterales de la pantalla y difuminándose
+   hacia el centro para no tapar el texto.
+   ===================================================================== */
+html body .content > section.events-section::before,
+html body .content > section.party-section::before,
+html body .content > section.rsvp-section::before {
+    content: "" !important;
+    position: absolute !important; inset: 0 !important; z-index: -1 !important;
+    pointer-events: none !important;
+    opacity: 0.72 !important; filter: none !important;
+    background-repeat: no-repeat !important;
+    -webkit-mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.55) 22%, transparent 40%, transparent 60%, rgba(0,0,0,0.55) 78%, #000 100%);
+            mask-image: linear-gradient(90deg, #000 0%, rgba(0,0,0,0.55) 22%, transparent 40%, transparent 60%, rgba(0,0,0,0.55) 78%, #000 100%);
+}
+html body .content > section.party-section::after { content: none !important; display: none !important; }
+
+/* Ceremonia */
+html body .content > section.events-section::before {
+    background-image: url("iconos/flores/corner.webp"), url("iconos/flores/vertical.webp"),
+                      url("iconos/flores/bouquet-e.webp"), url("iconos/flores/rose.webp") !important;
+    background-size: 240px auto, 190px auto, 220px auto, 160px auto !important;
+    background-position: left -40px top 40px, right -40px top 50px, left -50px bottom 60px, right -30px bottom 70px !important;
+}
+/* Detalles (sección alta) */
+html body .content > section.party-section::before {
+    background-image: url("iconos/flores/corner.webp"), url("iconos/flores/vertical.webp"),
+                      url("iconos/flores/bouquet-e.webp"), url("iconos/flores/bouquet.webp"),
+                      url("iconos/flores/rose-e.webp"), url("iconos/flores/vertical-e.webp") !important;
+    background-size: 240px auto, 190px auto, 210px auto, 210px auto, 150px auto, 170px auto !important;
+    background-position: left -40px top 40px, right -40px top 40px, left -60px top 45%, right -60px top 62%,
+                         left -30px bottom 60px, right -40px bottom 50px !important;
+}
+/* Confirmación */
+html body .content > section.rsvp-section::before {
+    background-image: url("iconos/flores/corner.webp"), url("iconos/flores/vertical.webp"), url("iconos/flores/rose-e.webp") !important;
+    background-size: 220px auto, 170px auto, 140px auto !important;
+    background-position: left -40px top 40px, right -40px top 40px, left -30px bottom 60px !important;
+}
+@media (max-width: 768px) {
+    html body .content > section.events-section::before {
+        background-size: 150px auto, 115px auto, 140px auto, 105px auto !important;
+        background-position: left -38px top 34px, right -34px top 40px, left -44px bottom 50px, right -28px bottom 60px !important;
+    }
+    html body .content > section.party-section::before {
+        background-size: 150px auto, 115px auto, 135px auto, 135px auto, 100px auto, 110px auto !important;
+        background-position: left -38px top 34px, right -34px top 34px, left -52px top 44%, right -52px top 64%,
+                             left -28px bottom 50px, right -36px bottom 44px !important;
+    }
+    html body .content > section.rsvp-section::before {
+        background-size: 140px auto, 110px auto, 95px auto !important;
+        background-position: left -36px top 34px, right -32px top 34px, left -26px bottom 50px !important;
+    }
+}
+
+
+/* Íconos nuevos (morado y dorado) */
+.countdown-section .section-title::before { background-image: url("iconos/rj/reloj.webp?v=1") !important; }
+.regalo-medallon.rj-medallon { background: #FFFFFF !important; }
+.regalo-medallon.rj-medallon img { object-fit: contain !important; padding: 22px; box-sizing: border-box; }
+/* Anillos dorados en el pie */
+.footer-content::before {
+    background-image: url("iconos/anim/anillos-oro.webp?v=1") !important;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25)) !important;
+}
